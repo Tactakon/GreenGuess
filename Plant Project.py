@@ -3,7 +3,7 @@ import pandas as pd
 from sklearn.linear_model import LinearRegression
 
 # create mock data
-data = {
+SpiderPlant = {
     'Light': [500, 1000, 2000, 4000, 8000],
     'Temperature': [20, 22, 24, 26, 28],
     'Soil': [20, 40, 60, 80, 100],
@@ -11,7 +11,37 @@ data = {
     'Humidity': [20, 40, 60, 80, 100],
     'Life Expectancy': [30, 35, 40, 45, 50]
 }
-df = pd.DataFrame(data)
+SnakePlant = {
+    'Light': [500, 1000, 2000, 4000, 8000],
+    'Temperature': [20, 22, 24, 26, 28],
+    'Soil': [20, 40, 60, 80, 100],
+    'Water': [20, 40, 60, 80, 100],
+    'Humidity': [20, 40, 60, 80, 100],
+    'Life Expectancy': [30, 35, 40, 45, 50]
+}
+Pothos = {
+    'Light': [500, 1000, 2000, 4000, 8000],
+    'Temperature': [20, 22, 24, 26, 28],
+    'Soil': [20, 40, 60, 80, 100],
+    'Water': [20, 40, 60, 80, 100],
+    'Humidity': [20, 40, 60, 80, 100],
+    'Life Expectancy': [30, 35, 40, 45, 50]
+}
+
+print("1. Spider Plant, 2. Snake Plant, 3. Pothos")
+plant = int(input("Choose a plant by their number: "))
+df = None
+while df is None:
+    if plant == 1:
+        df = pd.DataFrame(SpiderPlant)
+    elif plant == 2:
+        df = pd.DataFrame(SnakePlant)
+    elif plant == 3:
+        df = pd.DataFrame(Pothos)
+    else:
+        plant = int(input("Invalid input. Please enter a number between 1 and 3: "))
+
+
 
 # separate the features and target variable
 X = df.iloc[:, :-1].values
@@ -40,4 +70,3 @@ def predict_life_expectancy():
 
 predicted_life_expectancy = predict_life_expectancy()
 print("Predicted life expectancy: {:.2f} days".format(predicted_life_expectancy))
-5
