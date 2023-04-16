@@ -5,7 +5,7 @@ from sklearn.linear_model import LinearRegression
 # create mock data
 SpiderPlant = {
     'Light': [500, 1000, 2000, 4000, 8000],
-    'Temperature': [20, 22, 24, 26, 28],
+    'Temperature': [12, 16, 20, 24, 32],
     'Soil': [20, 40, 60, 80, 100],
     'Water': [20, 40, 60, 80, 100],
     'Humidity': [20, 40, 60, 80, 100],
@@ -13,7 +13,7 @@ SpiderPlant = {
 }
 SnakePlant = {
     'Light': [500, 1000, 2000, 4000, 8000],
-    'Temperature': [20, 22, 24, 26, 28],
+    'Temperature': [13, 15, 19, 24, 27],
     'Soil': [20, 40, 60, 80, 100],
     'Water': [20, 40, 60, 80, 100],
     'Humidity': [20, 40, 60, 80, 100],
@@ -21,7 +21,7 @@ SnakePlant = {
 }
 Pothos = {
     'Light': [500, 1000, 2000, 4000, 8000],
-    'Temperature': [20, 22, 24, 26, 28],
+    'Temperature': [13, 15, 10, 24, 29],
     'Soil': [20, 40, 60, 80, 100],
     'Water': [20, 40, 60, 80, 100],
     'Humidity': [20, 40, 60, 80, 100],
